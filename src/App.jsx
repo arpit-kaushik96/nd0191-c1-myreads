@@ -2,8 +2,8 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import * as BooksAPI from "./BooksAPI";
-import BookList from "./BookList";
-import SearchBooks from "./SearchBooks";
+import BookList from "./BookList.jsx";
+import SearchBooks from "./SearchBooks.jsx";
 
 function App() {
   const [books, setBooks] = useState([]);
