@@ -1,5 +1,5 @@
 import React from "react";
-import Book from "./Book";
+import Book from "./Book.jsx";
 
 const Bookshelf = ({ title, books, onShelfChange }) => {
   return (

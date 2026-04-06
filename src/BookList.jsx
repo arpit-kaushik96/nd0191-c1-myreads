@@ -1,7 +1,8 @@
 import React from "react";
-import Bookshelf from "./Bookshelf";
+import { Link } from "react-router-dom";
+import Bookshelf from "./Bookshelf.jsx";
 
-const BookList = ({ books, onShelfChange, onOpenSearch }) => {
+const BookList = ({ books, onShelfChange }) => {
   const shelves = [
     { key: "currentlyReading", title: "Currently Reading" },
     { key: "wantToRead", title: "Want to Read" },
@@ -26,7 +27,7 @@ const BookList = ({ books, onShelfChange, onOpenSearch }) => {
         </div>
       </div>
       <div className="open-search">
-        <a onClick={onOpenSearch}>Add a book</a>
+        <Link to="/search">Add a book</Link>
       </div>
     </div>
   );

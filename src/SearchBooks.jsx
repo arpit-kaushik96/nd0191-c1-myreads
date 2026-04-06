@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { search } from "./BooksAPI";
-import Book from "./Book";
+import Book from "./Book.jsx";
 
-const SearchBooks = ({ books, onShelfChange, onClose }) => {
+const SearchBooks = ({ books, onShelfChange }) => {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -39,9 +40,9 @@ const SearchBooks = ({ books, onShelfChange, onClose }) => {
   return (
     <div className="search-books">
       <div className="search-books-bar">
-        <a className="close-search" onClick={onClose}>
+        <Link to="/" className="close-search">
           Close
-        </a>
+        </Link>
         <div className="search-books-input-wrapper">
           <input
             type="text"
